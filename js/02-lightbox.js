@@ -16,15 +16,6 @@ const galleryItemsEl = galleryItems.map(el => {
 
 galleryContainer.insertAdjacentHTML('beforeend',  galleryItemsEl);
 
-galleryContainer.addEventListener('click', onImg);
-
-function onImg(ev) {
-    ev.preventDefault();
-    if (ev.target.nodeName !== 'IMG')     return
-    const imgSelected = ev.target.getAttribute('data-sourse');
-    // console.log(imgSelected)
-    var lightbox = new SimpleLightbox('.gallery a', {
+  var lightbox = new SimpleLightbox('.gallery a', {
         captionDelay: 250,
     });
-
-  };
